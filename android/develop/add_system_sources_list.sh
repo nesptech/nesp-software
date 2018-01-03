@@ -7,4 +7,5 @@ sudo cp /etc/apt/sources.list ./
 sudo chmod -R 777 ./sources.list
 sudo cat files/system_sources_list >> ./sources.list
 sudo cp ./sources.list /etc/apt/sources.list
+sudo rm ./sources.list
 sudo apt update

@@ -32,21 +32,23 @@ install-ubuntu-deb:
 	sh $(PACKAGE_DIR)/install_deb_ubuntu.sh
 common-develop-env:
 	sh $(PACKAGE_DIR)/common-develop-env.sh
+all-env:
+	sh $(PACKAGE_DIR)/common-develop-env.sh
+	sh $(DEVELOP_DIR)/set_system_env.sh
+	
 fix-deepin-boot:
 fix-ubuntu-boot:
 update-system:
 	@echo '======================升级系统============================'
-	sudo apt-get update  
-	sudo apt-get upgrade 
-	sudo apt autoremove
+	$(hide) sudo apt-get update  
+	$(hide) sudo apt-get upgrade 
+	$(hide) sudo apt autoremove
 	echo '============================完成==========================='
 	echo ''
 	echo ''
 all:
 	@echo "不包括显卡驱动"	
 	sh build/install_all.sh
-test:
-	$(hide) sh $(DEVELOP_DIR)/test.sh
 #INFO FOR TOOLS
 include $(DOCS_DIR)/info.mk
 #FILES CONFIG

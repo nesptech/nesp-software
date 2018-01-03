@@ -7,17 +7,20 @@ cd deepin-deb
 file=`ls`
 for f in $file; do
 files="$f"
-if [ "${files##*.}" = "deb" ];then
+if [ "${files##*.}" = "gz" ];then
+    echo "\033[34m===========正在解压 ${files%.*}.......=========\033[32m"
+    echo "\033[34m===========后缀名: ${files##*.}============\033[32m"
+    #do some thing here
+    sudo tar -xf $files -C ./; 
+elif [ "${files##*.}" = "deb" ];then
     echo "\033[34m===========正在安装 ${files%.*}.......=========\033[32m"
     echo "\033[34m===========后缀名: ${files##*.}============\033[32m"
-    #do some thing here
-    sudo dpkg -f $files;  
-    sudo apt install debhelper
-elif [ "${files##*.}" = "xz" ];then
-    echo "\033[34m===========正在安装 ${files%.*}。。。。。=========\033[32m"
-    echo "\033[34m===========后缀名: ${files##*.}============\033[32m"
-    #do some thing here
-    sudo tar -xvf $files -C ~/;  
+    #INSTALL DEBS
+    sudo apt-get -f install -y
+    sudo apt-get install -y $files;  
+    sudo apt-get -f install -y	
+    sudo apt-get install -y $files;
+    sudo apt install -y debhelper
 fi
 done
 sudo apt autoremove
