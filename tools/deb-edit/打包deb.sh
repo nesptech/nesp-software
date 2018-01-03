@@ -1,3 +1,7 @@
+#!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
+
 echo '\033[33m================打包 deb软件包====================\033[32m'
 echo ''
 sudo rm -r build

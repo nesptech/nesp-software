@@ -1,4 +1,7 @@
 #!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
+
 echo '\033[33m==============正在安装 Gmip、Wine Mega、add-apt-repository、atom==============\033[32m'
 sudo apt-get install -y gimp
 sudo apt-get install -y wine

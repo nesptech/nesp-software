@@ -1,3 +1,6 @@
+#!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
 cd ..
 make install-android6-env
 make install-patchflyme-tools

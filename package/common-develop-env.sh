@@ -1,4 +1,6 @@
 #!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
 
 echo "\033[33m============== 正在安装  curl、adb、fastboot.... =============\033[32m"
 sudo apt-get install -y curl adb fastboot
@@ -22,6 +24,9 @@ echo ""
 echo ""
 echo "\033[33m============== 正在安装  32位库.... =============\033[32m"
 sudo dpkg --add-architecture i386
+sudo apt-get update  
+sudo apt-get upgrade 
+sudo apt autoremove
 echo "\033[33m====================完成======================\033[32m"
 echo ""
 echo ""

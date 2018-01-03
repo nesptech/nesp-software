@@ -1,4 +1,7 @@
 #!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
+
 sudo mount /dev/sda6 /mnt
 sudo mount --bind /dev /mnt/dev
 sudo mount --bind /proc /mnt/proc

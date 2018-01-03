@@ -1,3 +1,6 @@
+#!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
 echo '\033[33m=================安装 MAC 主题====================\033[32m'
 echo ''
 echo '\033[33m===============添加macbuntu资源===================\033[32m'

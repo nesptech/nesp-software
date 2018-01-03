@@ -1,4 +1,7 @@
 #!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
+
 echo '\033[33m===============卸载亚马逊链接==========\033[32m'
 sudo apt-get remove --purge unity-webapps-common
 echo '\033[33m====================完成======================\033[32m'

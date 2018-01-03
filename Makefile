@@ -18,25 +18,35 @@ install-android-sdk-tools:
 	sh $(ANDROID_TOOLS_DIR)/install_android-tools.sh
 install-drive-nvidia:
 	sh $(DRIVE_DIR)/install_nvidia.sh
-install_for_system:
+install-for-system:
 	sh ./system/system.sh
 fix-lantern:
 	sh $(FIX_LINUX)/fix_lantern.sh
-set_system_env:
+set-system-env:
 	sh $(DEVELOP_DIR)/set_system_env.sh
+add-system-sources-list:
+	sh $(DEVELOP_DIR)/add_system_sources_list.sh
+install-deepin-deb:
+	sh $(PACKAGE_DIR)/install_deb_deepin.sh
+install-ubuntu-deb:
+	sh $(PACKAGE_DIR)/install_deb_ubuntu.sh
+common-develop-env:
+	sh $(PACKAGE_DIR)/common-develop-env.sh
 fix-deepin-boot:
 fix-ubuntu-boot:
 update-system:
-	@echo '\033[33m======================升级系统===================\033[32m'
+	@echo '======================升级系统============================'
 	sudo apt-get update  
 	sudo apt-get upgrade 
 	sudo apt autoremove
-	echo '\033[33m====================完成======================\033[32m'
+	echo '============================完成==========================='
 	echo ''
 	echo ''
 all:
 	@echo "不包括显卡驱动"	
 	sh build/install_all.sh
+test:
+	$(hide) sh $(DEVELOP_DIR)/test.sh
 #INFO FOR TOOLS
 include $(DOCS_DIR)/info.mk
 #FILES CONFIG

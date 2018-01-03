@@ -1,3 +1,7 @@
+#!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
+
 echo '\033[33m===============安装 miui patchrom tool===========\033[32m'
 echo ''
 sudo apt-get install repo

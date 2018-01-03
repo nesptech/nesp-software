@@ -1,4 +1,7 @@
 #!/bin/bash
+LOCAL_PATH=$(cd `dirname $0`; pwd)
+cd $LOCAL_PATH
+
 SET_ENV_FILE_DIR=./files/set_system_env
 ENV_FILE=~/.bashrc
 ENV_FILE_2=~/.profile
