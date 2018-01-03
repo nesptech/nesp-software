@@ -1,0 +1,141 @@
+<schemalist>
+	<schema id="org.notes" path="/org/notes/" gettext-domain="notes">
+
+		<key name="pos-x" type="i">
+			<default>920</default>
+			<summary>The saved width of the window.</summary>
+			<description></description>
+		</key>
+
+		<key name="pos-y" type="i">
+			<default>920</default>
+			<summary>The saved width of the window.</summary>
+			<description></description>
+		</key>
+
+		<key name="window-width" type="i">
+			<default>1100</default>
+			<summary>The saved width of the window.</summary>
+			<description></description>
+		</key>
+
+		<key name="window-height" type="i">
+			<default>640</default>
+			<summary>The saved height of the window.</summary>
+			<description></description>
+		</key>
+
+		<key name="panel-size" type="i">
+			<default>80</default>
+			<summary>The saved width of the pages panel.</summary>
+			<description></description>
+		</key>
+
+		<key name="mode" type="i">
+			<default>0</default>
+			<summary>The last used mode</summary>
+			<description></description>
+		</key>
+
+		<key name="last-notebook" type="i">
+			<default>0</default>
+			<summary>The last folder used</summary>
+			<description></description>
+		</key>
+
+		<key name="last-page" type="i">
+			<default>0</default>
+			<summary>last page opened</summary>
+			<description></description>
+		</key>
+
+		<key name="notes-location" type="s">
+			<default>""</default>
+			<summary>Previous location of your notes folder</summary>
+			<description>DEPRECATED</description>
+		</key>
+
+		<key name="notes-database" type="s">
+			<default>""</default>
+			<summary>full location of your notes db</summary>
+			<description></description>
+		</key>
+
+		<key name="import-files" type="b">
+			<default>true</default>
+			<summary>Will import files from the previous version of Notes-Up</summary>
+			<description>Enable it to re-import everything</description>
+		</key>
+
+		<key name="auto-indent" type="b">
+			<default>true</default>
+			<summary>Automatic Indentation</summary>
+			<description>toggles the editor's automatic indentation</description>
+		</key>
+
+		<key name="keep-sidebar-visible" type="b">
+			<default>false</default>
+			<summary>Keep Sidebar visible</summary>
+			<description>Toggles the sidebar to keep it visible when switching between VIEW and EDIT modes.</description>
+		</key>
+
+		<key name="spellcheck" type="b">
+			<default>true</default>
+			<summary>Enable spellcheck</summary>
+		</key>
+
+		<key name="line-numbers" type="b">
+			<default>false</default>
+			<summary>Automatic Indentation</summary>
+			<description>toggles the editor's automatic indentation</description>
+		</key>
+
+		<key name="editor-font" type="s">
+			<default>"Open Sans 12"</default>
+			<summary>Editor font</summary>
+			<description>The editor's font family and size</description>
+		</key>
+
+		<key name="editor-scheme" type="s">
+			<default>"tango"</default>
+			<summary>Editor scheme</summary>
+			<description>The editor's color scheme</description>
+		</key>
+
+		<key name="render-stylesheet" type="s">
+			<default>""</default>
+			<summary>Global stylesheet modifications for renderer to use</summary>
+			<description>This data is the actual CSS the renderer will use</description>
+		</key>
+
+		<key name="stylesheet" type="s">
+			<default>""</default>
+			<summary>Global default stylesheet name for renderer to use</summary>
+			<description>This must be the name of one of the default stylesheets</description>
+		</key>
+
+		<key name="spellcheck-language" type="s">
+			<default>""</default>
+			<summary>Spell check language used</summary>
+			<description>This must be the name of one of the installed languages</description>
+		</key>
+	</schema>
+
+	<schema path="/org/notes/notebook_data/" id="org.notes.notebook_data" gettext-domain="notes">
+		<child name="notebooks" schema="org.notes.notebook_data.notebook" />
+	</schema>
+
+	<schema id="org.notes.notebook_data.notebook" gettext-domain="notes">
+		<key name="stylesheet" type="s">
+			<default>"default"</default>
+			<summary>Stylesheet name for renderer to use</summary>
+			<description>This must be the name of one of the default stylesheets</description>
+		</key>
+		<key name="stylesheet-changes" type="s">
+			<default>""</default>
+			<summary>Stylesheet modifications for renderer to use</summary>
+			<description>This data is the actual CSS the renderer will use</description>
+		</key>
+	  	<child name="notebooks" schema="org.notes.notebook_data.notebook" />
+	</schema>
+</schemalist>

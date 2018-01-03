@@ -1,0 +1,16 @@
+b71acd7a722c54affab607c734e5993d  usr/bin/notes-up
+4ff0c9dfab08a31cebbc3ca81bebc5d5  usr/share/applications/com.github.philip-scott.notes-up.desktop
+c91d1d40a6077cbe209c44201e681b61  usr/share/doc/com.github.philip-scott.notes-up/changelog.Debian.gz
+6ccc019c1dbaa3601af963f3b6c324f6  usr/share/doc/com.github.philip-scott.notes-up/copyright
+a7307536ceec53baf607a24f6180963e  usr/share/glib-2.0/schemas/org.notes.gschema.xml
+bc6991ed7ecfccdf93b7ddd336d44b76  usr/share/icons/hicolor/scalable/apps/com.github.philip-scott.notes-up.svg
+9cbe8ca1ef7b6c6c3c3ac331f4ac2cf4  usr/share/locale/de/LC_MESSAGES/notes-up.mo
+a99ba2710422c2dd062063ba8f1e0756  usr/share/locale/es/LC_MESSAGES/notes-up.mo
+36c7dbdee58691c8219cdb29f1a1bbbe  usr/share/locale/fr/LC_MESSAGES/notes-up.mo
+3804232bde9e9828305b08a9ac954ca5  usr/share/locale/lt/LC_MESSAGES/notes-up.mo
+e6693854e8e6cf73a22264fb55aa4d82  usr/share/locale/pt_BR/LC_MESSAGES/notes-up.mo
+f3e9d1772beaa7ccce249249b963245f  usr/share/locale/ru/LC_MESSAGES/notes-up.mo
+c5839f427b5b1e700e5a409811c3a082  usr/share/metainfo/com.github.philip-scott.notes-up.appdata.xml
+c1dac4429e72bad0f3266511bcc30cf8  usr/share/notes-up/highlight.LICENSE
+ed179992ca1e3b1416ea334bf061d339  usr/share/notes-up/highlight.pack.js
+9af29c6cb4ace2c2062f6d421f7553aa  usr/share/notes-up/solarized-light.css
