@@ -5,3 +5,5 @@ export PATH=${PATH}:~/android-sdk-linux/platform-tools
 export USE_CCACHE=1
 #SET JAVA
 unset _JAVA_OPTIONS
+#SET REPO
+export PATH=~/bin:$PATH

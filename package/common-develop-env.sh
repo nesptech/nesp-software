@@ -31,7 +31,9 @@ echo "\033[33m====================完成======================\033[32m"
 echo ""
 echo ""
 echo "\033[33m============== 正在安装 Lantern开发环境.... =============\033[32m"
-sudo apt install -y git golang npm libappindicator3-dev libgtk-3-dev libappindicator3-1 make libc6-dev-i386
+sudo apt install -y npm libappindicator3-dev libgtk-3-dev libappindicator3-1  libc6-dev-i386 golang
+cat ./files/go/profile >> ~/.profile
+. ~/.profile
 sudo npm i gulp -g
 read -p "你的操作系统是Ubuntu吗?[y/n]   " mysystem
 if [ "$mysystem" = "y" ];then	

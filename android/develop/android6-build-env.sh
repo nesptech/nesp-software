@@ -25,12 +25,24 @@ sudo cp `ls` /usr/bin
 cd $LOCAL_PATH
 rm -rf ./make-3.82
 echo '<<<<'
-echo '>>>Change JDK version to v7'
+echo '>>>Install JDK all versions'
 echo ''
-sh ./add_system_sources_list.sh
-sudo apt remove -y openjdk-8-jre
-sudo apt autoremove -y
-sudo apt install -y openjdk-7-jre 
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo add-apt-repository -y ppa:openjdk-r/ppa
+sudo apt-get update
+#OPENJDK
+#sudo apt-get install -y openjdk-6-jdk
+sudo apt-get install -y openjdk-7-jdk #Android(5.0-6.0)
+sudo apt-get install -y openjdk-8-jdk #Android(7.0-8.0) 
+#sudo apt-get install -y openjdk-9-jdk
+#ORACLEJDK
+#sudo apt-get install -y oracle-java6-installer
+#sudo apt-get install -y oracle-java7-installer
+#sudo apt-get install -y oracle-java8-installer
+echo '<<<'
+echo '>>>Selet JDK version for work'
+sh set_java_version.sh
 echo '<<<'
 echo '>>>Change Python version to v2.7.x'
 echo ''

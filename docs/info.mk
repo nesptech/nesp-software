@@ -54,6 +54,7 @@ help:
 	@echo "help-git-lfs  ----查看git-lfs帮助信息"
 	@echo "help-git-ssh  ----查看git-ssh帮助信息"
 	@echo "reset-ssh-files  ----重置SSH文件(用户不要选)"
+	@echo "set-java-version  ----选择已安装的Java版本"
 	@echo "set-system-env  ----设置系统变量"
 	@echo "update-system  ----更新升级系统"
 	@echo "v  ----查看版本号"

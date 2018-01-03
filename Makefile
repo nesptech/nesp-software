@@ -24,6 +24,8 @@ fix-lantern:
 	sh $(FIX_LINUX)/fix_lantern.sh
 set-system-env:
 	sh $(DEVELOP_DIR)/set_system_env.sh
+set-java-version:
+	sh $(DEVELOP_DIR)/set_java_version.sh
 add-system-sources-list:
 	sh $(DEVELOP_DIR)/add_system_sources_list.sh
 install-deepin-deb:
