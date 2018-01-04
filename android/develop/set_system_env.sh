@@ -11,5 +11,5 @@ cp $ENV_FILE ~/.bashrc.bak
 sudo cp $ENV_FILE_2 ~/.profile.bak
 cat  $SET_ENV_FILE_DIR/bashrc >> $ENV_FILE
 sudo cat  $SET_ENV_FILE_DIR/profile >> $ENV_FILE_2
-. ~/.bashrc
-. ~/.profile
+source ~/.bashrc
+source ~/.profile

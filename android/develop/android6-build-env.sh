@@ -9,8 +9,14 @@ echo ''
 #sudo apt-get install -y openjdk-7-jdk openjdk-7-jre
 # 安装所需的程序包 (Ubuntu 14.04)
 #64 位版本的 Ubuntu。建议您使用 Ubuntu 14.04
-sudo apt-get install -y git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev libncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip libesd0-dev lzop libsdl1.2-dev pngcrush  schedtool squashfs-tools repo
-#sudo apt-get install -y git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+sudo apt-get install -y git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+
+sudo apt-get install -y libncurses5-dev libesd0-dev lzop libsdl1.2-dev pngcrush schedtool squashfs-tools repo
+sudo apt-get install -y libx11-dev:i386 libreadline6-dev:i386
+sudo apt-get install -y libncurses5-dev:i386 
+sudo apt-get install -y tofrodos python-markdown zlib1g-dev:i386 
+sudo apt-get install -y dpkg-dev
+sudo apt-get install -y m4
 echo ''
 echo '>>>Change Make version to v3.82'
 echo ''
@@ -41,8 +47,19 @@ sudo apt-get install -y openjdk-8-jdk #Android(7.0-8.0)
 #sudo apt-get install -y oracle-java7-installer
 #sudo apt-get install -y oracle-java8-installer
 echo '<<<'
-echo '>>>Selet JDK version for work'
+echo '>>>Please Selet JDK version-1.7 for work'
 sh set_java_version.sh
+echo '<<<'
+
+echo '>>>Config Java System_env for java-1.7'
+echo '#SET SYSTEM_ENV OF JAVA VERSION FOR ANDROID-6.0' >> ~/.bashrc
+echo 'export /usr/lib/jvm/java-7-openjdk-amd64' >> ~/.bashrc
+echo 'export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64' >> ~/.bashrc
+echo 'export ANDROID_JAVA_HOME=$JAVA_HOME' >> ~/.bashrc
+echo 'export PATH=$PATH:$JAVA_HOME/jre/bin' >> ~/.bashrc
+echo 'export CLASSPATH=/usr/lib/jvm/java-7-openjdk-amd64/lib:/usr/lib/jvm/java-7-openjdk-amd64/jrclib:$CLASSPATH' >> ~/.bashrc
+source ~/.bashrc
+
 echo '<<<'
 echo '>>>Change Python version to v2.7.x'
 echo ''

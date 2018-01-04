@@ -1,9 +1,13 @@
+
 #android sdk for miui patchrom
 export PATH=${PATH}:~/android-sdk-linux/tools
 export PATH=${PATH}:~/android-sdk-linux/platform-tools
+
 #config android build ccache
 export USE_CCACHE=1
+
 #SET JAVA
 unset _JAVA_OPTIONS
+
 #SET REPO
 export PATH=~/bin:$PATH
