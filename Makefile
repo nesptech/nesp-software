@@ -44,15 +44,17 @@ fix-deepin-boot:
 fix-ubuntu-boot:
 update-system:
 	@echo '======================升级系统============================'
-	$(hide) sudo apt-get update  
-	$(hide) sudo apt-get upgrade 
-	$(hide) sudo apt autoremove
+	sudo apt-get update  
+	sudo apt-get upgrade 
+	sudo apt autoremove
 	echo '============================完成==========================='
 	echo ''
 	echo ''
-update-software:
-	git remote add origin git@github.com:NESPTechnology/nesp_software.git
-	git pull origin Linux
+update:
+	@git remote rm origin
+	@git remote add origin git@github.com:NESPTechnology/nesp_software.git
+	@git pull origin Linux
+	@echo '============================完成==========================='	
 all:
 	@echo "不包括显卡驱动"	
 	sh $(BUILD_DIR)/install_all.sh
