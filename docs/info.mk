@@ -19,6 +19,7 @@ about:
 	@echo "-AOSP 编译环境"
 	@echo "-Patchrom工具（MIUI、Flyme）"
 	@echo "-Patchrom编译环境"
+	@echo "-git-up一键上传git仓库"
 	@echo "\033[36m2.软件\033[32m"
 	@echo "-Atom"
 	@echo "-Android File Transfer"
