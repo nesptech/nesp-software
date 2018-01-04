@@ -2,6 +2,8 @@
 LOCAL_PATH=$(cd `dirname $0`; pwd)
 cd $LOCAL_PATH
 
+mkdir ~/los
+cd ~/los
 repo init --repo-url git://github.com/FlymeOS/repo.git \
             -u https://mirrors.tuna.tsinghua.edu.cn/git/lineageOS/LineageOS/android.git \
             -b cm-13.0 --no-repo-verify

@@ -39,7 +39,7 @@ all-env:
 	sh $(PACKAGE_DIR)/common-develop-env.sh
 	sh $(DEVELOP_DIR)/set_system_env.sh
 upload:
-	sh $(BUILD_DIR)/upload.sh 	
+	sh $(BUILD_DIR)/git_upload.sh 	
 fix-deepin-boot:
 fix-ubuntu-boot:
 update-system:
