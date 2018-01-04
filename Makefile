@@ -6,6 +6,7 @@ DRIVE_DIR :=$(TOOLS_ROOT)/drive
 FIX_LINUX :=$(TOOLS_ROOT)/fix_linux
 PACKAGE_DIR :=$(TOOLS_ROOT)/package
 FILES_DIR :=$(TOOLS_ROOT)/files
+BUILD_DIR :=$(TOOLS_ROOT)/build
 #TOOLS_ROOT :=$(shell dirname $(TOOLS_ROOT))
 
 install-android6-env:
@@ -37,7 +38,8 @@ common-develop-env:
 all-env:
 	sh $(PACKAGE_DIR)/common-develop-env.sh
 	sh $(DEVELOP_DIR)/set_system_env.sh
-	
+upload:
+	sh $(BUILD_DIR)/upload.sh 	
 fix-deepin-boot:
 fix-ubuntu-boot:
 update-system:
@@ -50,7 +52,7 @@ update-system:
 	echo ''
 all:
 	@echo "不包括显卡驱动"	
-	sh build/install_all.sh
+	sh $(BUILD_DIR)/install_all.sh
 #INFO FOR TOOLS
 include $(DOCS_DIR)/info.mk
 #FILES CONFIG
