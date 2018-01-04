@@ -64,7 +64,7 @@ help:
 	@echo "set-java-version  ----选择已安装的Java版本"
 	@echo "set-system-env  ----设置系统变量"
 	@echo "update-system  ----更新升级系统"
-	@echo "update-software  ----更新本工具"
+	@echo "update  ----更新本工具"
 	@echo "v  ----查看版本号"
 help-git-lfs:
 	@echo "追踪文件git lfs track *.bin "

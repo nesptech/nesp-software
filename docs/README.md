@@ -54,5 +54,5 @@ make [选项]
 * set-java-version ----选择已安装的Java版本    
 * set-system-env ----设置系统变量    
 * update-system ----更新升级系统   
-* update-software  ----更新本工具
+* update  ----更新本工具
 * v ----查看版本号    
