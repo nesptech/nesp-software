@@ -50,6 +50,9 @@ update-system:
 	echo '============================完成==========================='
 	echo ''
 	echo ''
+update-software:
+	git remote add origin git@github.com:NESPTechnology/nesp_software.git
+	git pull origin Linux
 all:
 	@echo "不包括显卡驱动"	
 	sh $(BUILD_DIR)/install_all.sh
