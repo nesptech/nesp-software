@@ -12,6 +12,7 @@ QQ:1756404649/2021785540
 * AOSP 编译环境   
 * Patchrom工具（MIUI、Flyme）   
 * Patchrom编译环境    
+* git-up本地git仓库上传工具
 ### 2.软件  
 * Atom   
 * Android File Transfer  
