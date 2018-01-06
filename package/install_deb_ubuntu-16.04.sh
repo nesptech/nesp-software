@@ -20,9 +20,17 @@ elif [ "${files##*.}" = "deb" ];then
     sudo apt-get install -y $files;  
     sudo apt-get -f install -y	
     sudo apt-get install -y $files;
-    #CRACK CROSSOVER
-    sudo cp -f Crack/winewrapper.exe.so /opt/cxoffice/lib/wine
-    sudo apt install -y debhelper
 fi
 done
+
+#CRACK CROSSOVER
+sudo cp -f Crack/winewrapper.exe.so /opt/cxoffice/lib/wine
+sudo apt install -y debhelper
+
+#INSTALL PLAYONLINUX
+wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
+sudo apt-get update
+sudo apt-get install playonlinux
+
 sudo apt autoremove
