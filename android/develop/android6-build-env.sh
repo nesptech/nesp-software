@@ -16,7 +16,8 @@ sudo apt-get install -y libx11-dev:i386 libreadline6-dev:i386
 sudo apt-get install -y libncurses5-dev:i386 
 sudo apt-get install -y tofrodos python-markdown zlib1g-dev:i386 
 sudo apt-get install -y dpkg-dev
-sudo apt-get install -y m4
+sudo apt-get install -y m4 maven p7zip-rar p7zip-full p7zip gcc-aarch64-linux-gnu
+
 echo ''
 echo '>>>Change Make version to v3.82'
 echo ''

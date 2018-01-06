@@ -10,7 +10,7 @@ files="$f"
 if [ "${files##*.}" = "gz" ];then
     echo "\033[34m===========正在解压 ${files%.*}.......=========\033[32m"
     echo "\033[34m===========后缀名: ${files##*.}============\033[32m"
-    #do some thing here
+    #TAR FILES
     sudo tar -xf $files -C ./; 
 elif [ "${files##*.}" = "deb" ];then
     echo "\033[34m===========正在安装 ${files%.*}=========\033[32m"

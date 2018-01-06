@@ -1,6 +1,6 @@
 #!/bin/bash
-LOCAL_PATH=$(cd `dirname $0`; pwd)
-cd $LOCAL_PATH 
+#LOCAL_PATH=$(cd `dirname $0`; pwd)
+#cd $LOCAL_PATH 
 
 repo sync --no-clone-bundle -c -j8
 while [ $? = 1 ]; do  

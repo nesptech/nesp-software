@@ -1,0 +1,2 @@
+#NESP ADB DRIVE
+SUBSYSTEM=="usb",ATTRS{idVendor}=="Vendor",ATTRS{idProduct}=="Product",MODE="0666"
